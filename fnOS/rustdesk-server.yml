@@ -1,18 +1,28 @@
 services:
-  rustdesk-server:
-    image: rustdesk/rustdesk-server-s6:latest
-    container_name: rustdesk-server
+  rustdesk:
     ports:
-      - 30065:21115
-      - 30066:21116
-      - 30066:21116/udp
-      - 30067:21117
-      - 30068:21118
-      - 30069:21119
+      - 21114:21114
+      - 21115:21115
+      - 21116:21116
+      - 21116:21116/udp
+      - 21117:21117
+      - 21118:21118
+      - 21119:21119
+    image: lejianwen/rustdesk-server-s6:latest
     environment:
-      - RELAY=域名:端口
+      - RELAY=反代21117的域名:端口
       - ENCRYPTED_ONLY=1
+      - MUST_LOGIN=N  # 是否必须登录才能远程
+      - TZ=Asia/Shanghai
+      - RUSTDESK_API_RUSTDESK_ID_SERVER=反代21116的域名:端口
+      - RUSTDESK_API_RUSTDESK_RELAY_SERVER=反代21117的域名:端口
+      - RUSTDESK_API_RUSTDESK_API_SERVER=反代21114的域名:端口
+      - RUSTDESK_API_RUSTDESK_WS_HOST=反代21114的域名:端口
+      - RUSTDESK_API_KEY_FILE=/data/id_ed25519.pub
+      - RUSTDESK_API_JWT_KEY=    # jwt 为空不启用
+      - RUSTDESK_API_JWT_EXPIRE_DURATION=   # jwt 为空不启用
     volumes:
-      - /vol1/1000/Docker/rustdesk:/data
-    restart: always
+      - ./data/rustdesk/server:/data
+      - ./data/rustdesk/api:/app/data #将数据库挂载
     network_mode: bridge
+    restart: unless-stopped
