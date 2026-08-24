@@ -1,15 +1,13 @@
 services:
   openlist:
-    image: openlistteam/openlist:v4.0.4-aio
-    container_name: alist
+    image: 'openlistteam/openlist:latest'
+    container_name: openlist
     ports:
-      - 24005:5244
+      - '24005:5244'
     volumes:
-      - /vol1/1000/Docker/alist:/opt/alist/data
+      - '/vol1/1000/Docker/openlist/data:/opt/openlist/data'
     environment:
-      - PUID=1000
-      - PGID=1001
       - UMASK=022
-      - TZ=Asia/Shanghai
+    user: '1001:1001'
     restart: always
     network_mode: bridge
