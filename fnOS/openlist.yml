@@ -8,6 +8,6 @@ services:
       - /vol1/1000/Docker/openlist/data:/opt/openlist/data
     environment:
       - UMASK=022
-    user: 1001:1001
+    user: "1001:1001"
     restart: always
     network_mode: bridge
