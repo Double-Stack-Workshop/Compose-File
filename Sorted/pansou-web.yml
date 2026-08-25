@@ -3,7 +3,7 @@ services:
     image: ghcr.io/fish2018/pansou-web:latest
     container_name: pansou-web
     ports:
-      - 8888:8888
+      - 8888:80
     environment:
       - PANSOU_PORT=8888
       - CACHE_PATH=/app/data/cache
