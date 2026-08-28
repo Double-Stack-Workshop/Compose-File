@@ -3,21 +3,21 @@
 
 已整理容器
 
-| 容器名称 | 容器端口 | 初始用户名 | 初始密码 | 完成测试 |
-| :-----: | :-----: | :-----: | :-----: | :-----: |
-| apprise | 8000 | / | / | fnOS |
-| emby | 20015 | / | / | fnOS |
-| flaresolverr | 8191 | / | / | fnOS |
-| iptv | 1905 | admin | password | fnOS |
-| lucky | 16601 | 666 | 666 | fnOS |
-| mdc-ng | 9208 | admin | password | fnOS |
-| moviepilot | 20005 | admin | 运行日志查看 | fnOS |
-| navidrome | 21000 | / | / | fnOS |
-| npc | / | / | / | fnOS |
-| openlist-strm | 30050 | / | / | fnOS |
-| openlist | 24005 | admin | 运行日志查看 | fnOS |
-| pansou-api | 8888 | admin | password | fnOS |
-| pansou-web | 8888 | admin | password | fnOS |
-| qbittorrent | 28000 | admin | 运行日志查看 | fnOS |
-| transmission | 28005 | root | root | fnOS |
-| uptime-kuma | 3001 | / | / | fnOS |
+| 容器名称 | 容器端口 | 初始用户名 | 初始密码 | fnOS | UgreenNew | UgreenOld |
+| :-----: | :-----: | :-----: | :-----: | :---: | :---: | :---: |
+| apprise | 8000 | / | / | ● | ✕ | ✕ |
+| emby | 20015 | / | / | ● | ✕ | ✕ |
+| flaresolverr | 8191 | / | / | ● | ✕ | ✕ |
+| iptv | 1905 | admin | password | ● | ✕ | ✕ |
+| lucky | 16601 | 666 | 666 | ● | ✕ | ✕ |
+| mdc‑ng | 9208 | admin | password | ● | ✕ | ✕ |
+| moviepilot | 20005 | admin | 运行日志查看 | ● | ✕ | ✕ |
+| navidrome | 21000 | / | / | ● | ✕ | ✕ |
+| npc | / | / | / | ● | ✕ | ✕ |
+| openlist‑strm | 30050 | / | / | ● | ✕ | ✕ |
+| openlist | 24005 | admin | 运行日志查看 | ● | ✕ | ✕ |
+| pansou‑api | 8888 | admin | password | ● | ✕ | ✕ |
+| pansou‑web | 8888 | admin | password | ● | ✕ | ✕ |
+| qbittorrent | 28000 | admin | 运行日志查看 | ● | ✕ | ✕ |
+| transmission | 28005 | root | root | ● | ✕ | ✕ |
+| uptime‑kuma | 3001 | / | / | ● | ✕ | ✕ |
