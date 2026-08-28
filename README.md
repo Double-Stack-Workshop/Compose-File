@@ -5,8 +5,10 @@
 
 | 容器名称 | 容器端口 | 初始用户名 | 初始密码 | 完成测试 |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
+| apprise | 8000 | / | / | fnOS |
 | emby | 20015 | / | / | fnOS |
 | flaresolverr | 8191 | / | / | fnOS |
+| iptv | 1905 | admin | password | fnOS |
 | lucky | 16601 | 666 | 666 | fnOS |
 | moviepilot | 20005 | admin | 运行日志查看 | fnOS |
 | navidrome | 21000 | / | / | fnOS |
