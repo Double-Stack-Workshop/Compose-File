@@ -16,5 +16,5 @@
 | pansou-api | 8888 | admin | password | fnOS |
 | pansou-web | 8888 | admin | password | fnOS |
 | qbittorrent | 28000 | admin | 运行日志查看 | fnOS |
-| transmission | 8191 | root | root | fnOS |
+| transmission | 28005 | root | root | fnOS |
 | uptime-kuma | 3001 | / | / | fnOS |
