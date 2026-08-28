@@ -10,6 +10,7 @@
 | flaresolverr | 8191 | / | / | fnOS |
 | iptv | 1905 | admin | password | fnOS |
 | lucky | 16601 | 666 | 666 | fnOS |
+| mdc-ng | 9208 | admin | password | fnOS |
 | moviepilot | 20005 | admin | 运行日志查看 | fnOS |
 | navidrome | 21000 | / | / | fnOS |
 | npc | / | / | / | fnOS |
