@@ -208,8 +208,8 @@ elif [ "$nas_choose" = "3" ];then
     print_box "安装完成"
     echo "docker‑compose.yml存放目录: ${full_path}"
     echo "项目数据存放目录: ${shop_data_path}"
-    echo -e "\n启动项目命令:"
-    echo "cd ${full_path} && docker compose up -d"
+    echo -e "\n正在启动项目..."
+    cd "${full_path}" && docker compose up -d
 
 else
     echo "输入无效，请重新运行脚本并选择1或者2或者3"
