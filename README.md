@@ -20,7 +20,7 @@
 | openlist | 24005 | admin | 运行日志查看 | ● | ✕ | ✕ |
 | pansou‑api | 8888 | admin | password | ● | ✕ | ✕ |
 | pansou‑web | 8888 | admin | password | ● | ✕ | ✕ |
-| qbittorrent | 28000 | admin | 运行日志查看 | ● | ✕ | ✕ |
+| qbittorrent | 28000 | admin | 运行日志查看 | ● | ● | ✕ |
 | romm | 8085 | / | / | ● | ✕ | ✕ |
 | transmission | 28005 | root | root | ● | ✕ | ✕ |
 | uptime‑kuma | 3001 | / | / | ● | ✕ | ✕ |
