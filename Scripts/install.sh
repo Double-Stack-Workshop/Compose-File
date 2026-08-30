@@ -81,6 +81,17 @@ if [ "$nas_choose" = "1" ];then
         exit 1
     fi
     sed -i "s|./backend/|${shop_data_path}/|g" docker-compose.yml
+    echo -e "\n请输入宿主机访问端口（默认8000）:"
+    read host_port
+    if [ -z "$host_port" ]; then
+        host_port=8000
+    fi
+    if ! [[ "$host_port" =~ ^[0-9]+$ ]]; then
+        echo "端口必须为数字，使用默认8000"
+        host_port=8000
+    fi
+    sed -i "s|8000:8001|${host_port}:8001|g" docker-compose.yml
+    echo "已设置端口映射：${host_port}:8001"
     sleep 1
     clear
     print_box "安装完成"
@@ -135,6 +146,17 @@ elif [ "$nas_choose" = "2" ];then
         exit 1
     fi
     sed -i "s|./backend/|${shop_data_path}/|g" docker-compose.yml
+    echo -e "\n请输入宿主机访问端口（默认8000）:"
+    read host_port
+    if [ -z "$host_port" ]; then
+        host_port=8000
+    fi
+    if ! [[ "$host_port" =~ ^[0-9]+$ ]]; then
+        echo "端口必须为数字，使用默认8000"
+        host_port=8000
+    fi
+    sed -i "s|8000:8001|${host_port}:8001|g" docker-compose.yml
+    echo "已设置端口映射：${host_port}:8001"
     sleep 1
     clear
     print_box "安装完成"
@@ -203,6 +225,17 @@ elif [ "$nas_choose" = "3" ];then
         exit 1
     fi
     sed -i "s|./backend/|${shop_data_path}/|g" docker-compose.yml
+    echo -e "\n请输入宿主机访问端口（默认8000）:"
+    read host_port
+    if [ -z "$host_port" ]; then
+        host_port=8000
+    fi
+    if ! [[ "$host_port" =~ ^[0-9]+$ ]]; then
+        echo "端口必须为数字，使用默认8000"
+        host_port=8000
+    fi
+    sed -i "s|8000:8001|${host_port}:8001|g" docker-compose.yml
+    echo "已设置端口映射：${host_port}:8001"
     sleep 1
     clear
     print_box "安装完成"
