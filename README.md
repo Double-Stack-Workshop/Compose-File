@@ -9,10 +9,10 @@
 | emby | 20015 | / | / | ● | ✕ | ✕ |
 | flaresolverr | 8191 | / | / | ● | ✕ | ✕ |
 | iptv | 1905 | admin | password | ● | ✕ | ✕ |
-| litepan | 5211 | admin | admin | ● | ✕ | ✕ |
+| litepan | 5211 | admin | admin | ✕ | ✕ | ✕ |
 | lucky | 16601 | 666 | 666 | ● | ✕ | ✕ |
 | mdc‑ng | 9208 | admin | password | ● | ✕ | ✕ |
-| mediatrack | 3000 | / | / | ● | ✕ | ✕ |
+| mediatrack | 3000 | / | / | ✕ | ✕ | ✕ |
 | moviepilot | 20005 | admin | 运行日志查看 | ● | ✕ | ✕ |
 | navidrome | 21000 | / | / | ● | ✕ | ✕ |
 | npc | / | / | / | ● | ✕ | ✕ |
