@@ -1,54 +1,50 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: mediatrack-postgres
+    container_name: mediaryscout-postgres
     ports:
-      - "5432:5432"
+      - 5432:5432
     volumes:
-      - /vol1/1000/Docker/postgres:/var/lib/postgresql/data    
+      - /vol1/1000/Docker/postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: mediatrack
-      POSTGRES_USER: mediatrack
-      POSTGRES_PASSWORD: mediatrack
+      - POSTGRES_DB=mediaryscout
+      - POSTGRES_USER=mediaryscout
+      - POSTGRES_PASSWORD=mediaryscout
     restart: always
     networks:
-      - mediatrack-network
+      - mediaryscout-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U mediatrack -d mediatrack"]
+      test: ["CMD-SHELL", "pg_isready -U mediaryscout -d mediaryscout"]
       interval: 5s
       timeout: 3s
-      retries: 12      
+      retries: 12
 
   pansou-web:
     image: ghcr.io/fish2018/pansou-web:latest
     container_name: pansou-web
     ports:
-      - "8888:80"
+      - 8888:80
     volumes:
       - /vol1/1000/Docker/pansou-web:/app/data
     environment:
       - PANSOU_PORT=8888
       - CACHE_PATH=/app/data/cache
       - LOG_PATH=/app/data/logs
-      - AUTH_ENABLED=true
-      - AUTH_USERS=admin:password
-      - AUTH_TOKEN_EXPIRY=24
-      - AUTH_JWT_SECRET=72d2f01e7819c365894b2136ac70d24807f297097e857034d82577d91234abcd      
     restart: always
     networks:
-      - mediatrack-network
+      - mediaryscout-network
 
-  mediatrack:
-    image: mediatrack:v1.4.1
-    container_name: mediatrack
+  mediaryscout:
+    image: mediaryscout:v1.4.1
+    container_name: mediaryscout
     ports:
-      - "3000:3000"
+      - 3000:3000
     environment:
-      - MEDIA_TRACK_POSTGRES_URL=postgres://mediatrack:mediatrack@127.0.0.1:5432/mediatrack
+      - MEDIA_TRACK_POSTGRES_URL=postgres://mediaryscout:mediaryscout@127.0.0.1:5432/mediaryscout
       - PANSOU_BASE_URL=http://127.0.0.1:8888
       - MEDIA_TRACK_SEARCH_PROVIDER=tmdb
       - MEDIA_TRACK_WORKFLOW_ADAPTER=pansou
-      - MEDIA_TRACK_STORAGE_ADAPTER=quark
+      - MEDIA_TRACK_STORAGE_ADAPTER=115
       - MEDIA_TRACK_AGENT_ADAPTER=vercel-ai
       - MEDIA_TRACK_DEMO_SEED=0
     healthcheck:
@@ -61,7 +57,7 @@ services:
       start_period: 40s
     restart: always
     networks:
-      - mediatrack-network
+      - mediaryscout-network
     depends_on:
       postgres:
         condition: service_healthy
@@ -69,6 +65,6 @@ services:
         condition: service_started
 
 networks:
-  mediatrack-network:
+  mediaryscout-network:
     external: true
-    name: mediatrack
+    name: mediaryscout
