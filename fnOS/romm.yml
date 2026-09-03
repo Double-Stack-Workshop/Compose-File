@@ -16,7 +16,7 @@ services:
       - DB_NAME=romm
       - DB_USER=romm-user
       - DB_PASSWD=password
-      - ROMM_AUTH_SECRET_KEY=42dbae201721b241e075e1ee2405a6357cb1becc466140d7a55df05b22e55ed0
+      - ROMM_AUTH_SECRET_KEY=7afc95c13f244e6c4d9213690a982997070383b9e8a9d688a2f6d182e7ebc8c0
       - IGDB_CLIENT_ID=
       - IGDB_CLIENT_SECRET=
       - HASHEOUS_API_ENABLED=true
